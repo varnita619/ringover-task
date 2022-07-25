@@ -27,7 +27,7 @@ export const Contact = () => {
       </div>
 
       <div className="footer">
-        <p>stay in touch</p>
+        <p className="footer-content">stay in touch</p>
         <img src={twitter} alt="twitter" />
         <img src={insta} alt="insta" />
         <img src={fb} alt="fb" />

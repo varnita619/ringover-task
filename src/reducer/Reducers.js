@@ -7,13 +7,6 @@ export const cartReducer = (state, action) => {
         ...state,
         cart: state.cart.filter((c) => c._id !== action.payload._id),
       };
-    case "CHANGE_CART_QTY":
-      return {
-        ...state,
-        cart: state.cart.filter((c) =>
-          c._id === action.payload._id ? (c.qty = action.payload.qty) : c.qty
-        ),
-      };
     default:
       return state;
   }
@@ -37,7 +30,7 @@ export const productReducer = (state, action) => {
         category: [...state.category, action.payload],
       };
     case "CLEAR_FILTERS":
-      return { priceRange: 8000,category: [],};
+      return { priceRange: 8000, category: [] };
     default:
       return state;
   }

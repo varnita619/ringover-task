@@ -1,8 +1,10 @@
 import React from "react";
 import "./ProductCard.css";
+import { useAllContext } from "../../context/context";
 
 export const ProductCard = ({eachProduct}) => {
   const {name, price, imageURL} = eachProduct;
+  const { dispatch} = useAllContext();
  
   return (
       <div className="card">
@@ -35,6 +37,8 @@ export const ProductCard = ({eachProduct}) => {
             </label>
           </div>
         </div>
+
+        <button onClick={() => dispatch({type:'ADD_TO_CART', payload:eachProduct})}>Cart</button>
       </div>
   );
 };

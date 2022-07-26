@@ -12,6 +12,7 @@ const ContextProvider = ({ children }) => {
     products: products,
     cart: [],
   });
+  const{cart} = state
 
   const [productState, productDispatch] = useReducer(productReducer, {
     priceRange: 8000,

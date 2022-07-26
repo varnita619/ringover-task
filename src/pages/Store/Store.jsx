@@ -3,6 +3,7 @@ import "./Store.css";
 import { Filter, ProductCard, Cart } from "./../../Component";
 import SearchIcon from "@mui/icons-material/Search";
 import { useAllContext } from "../../context/context";
+import LocalMallOutlinedIcon from '@mui/icons-material/LocalMallOutlined';
 
 export const Store = () => {
   const { filteredProducts } = useAllContext();
@@ -27,7 +28,16 @@ export const Store = () => {
         </div>
       </div>
       <div className="cart-container">
-        <Cart />
+        <div className="products-header">
+          <h3 className="products-heading">Cart</h3>
+
+          <div className="action-btn">
+            <LocalMallOutlinedIcon />
+          </div>
+        </div>
+        <div className="cart-products-container">
+          <Cart />
+        </div>
       </div>
     </div>
   );

@@ -1,21 +1,21 @@
 import React from "react";
 import "./ProductCard.css";
-import shoe2 from "./../../assets/assets/shoe2.png";
 
-export const ProductCard = () => {
+export const ProductCard = ({eachProduct}) => {
+  const {name, price, imageURL} = eachProduct;
+ 
   return (
-    <div className="cards-container">
       <div className="card">
         <div className="product-image">
-          <img src={shoe2} alt="card" className="product-img" />
+          <img src={imageURL} alt="card" className="product-img" />
         </div>
 
         <div className="card-details">
-          <h3>KSL 01</h3>
+          <h3>{name}</h3>
         </div>
         <div className="card-pricing">
           <div className="price">
-          <p>Rs 2000/-</p>
+          <p>Rs {price}/-</p>
           </div>
           <div className="rating">
             <label className="check rated">
@@ -36,6 +36,5 @@ export const ProductCard = () => {
           </div>
         </div>
       </div>
-    </div>
   );
 };

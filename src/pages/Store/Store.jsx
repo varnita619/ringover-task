@@ -2,8 +2,10 @@ import React from "react";
 import "./Store.css";
 import { Filter, ProductCard, Cart } from "./../../Component";
 import SearchIcon from "@mui/icons-material/Search";
+import { useAllContext } from "../../context/context";
 
 export const Store = () => {
+  const { filteredProducts } = useAllContext();
   return (
     <div className="store-container">
       <div className="filters-container">
@@ -18,7 +20,11 @@ export const Store = () => {
             <button className="sort-btn">sort by</button>
           </div>
         </div>
-        <ProductCard />
+        <div className="cards-container">
+          {filteredProducts.map((eachProduct, i) => {
+            return <ProductCard eachProduct={eachProduct} key={i} />;
+          })}
+        </div>
       </div>
       <div className="cart-container">
         <Cart />

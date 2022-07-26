@@ -15,26 +15,32 @@
   box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
 }
 
-.products-header{
+.products-header {
   display: flex;
-  padding: .5rem;
+  padding: 0.5rem;
   justify-content: space-between;
 }
 
-.products-heading{
+.products-heading {
   font-size: 1.5rem;
 }
 
-.action-btn{
+.cards-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
+
+.action-btn {
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-.sort-btn{
+.sort-btn {
   background: transparent;
   height: 1.5rem;
-  margin-left: .6rem;
+  margin-left: 0.6rem;
 }
 
 .cart-container {

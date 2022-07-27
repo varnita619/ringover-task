@@ -6,19 +6,23 @@ import { useAllContext } from "../../context/context";
 import LocalMallOutlinedIcon from "@mui/icons-material/LocalMallOutlined";
 import PlaceOutlinedIcon from "@mui/icons-material/PlaceOutlined";
 import CalendarTodayOutlinedIcon from "@mui/icons-material/CalendarTodayOutlined";
+import { useNavigate } from "react-router-dom";
 
 export const Product = () => {
   const {
     state: { cart },
   } = useAllContext();
+  const navigate = useNavigate();
 
   return (
     <div className="single-prd-container">
       <div className="single-prod">
         <div className="head">
           <span className="prod-heading">
-            {" "}
-            <ArrowBackIosIcon className="arrow-icon" />
+            <ArrowBackIosIcon
+              className="arrow-icon"
+              onClick={() => navigate("/")}
+            />
             your design space
           </span>
           <SingleProductCard />
@@ -42,22 +46,40 @@ export const Product = () => {
             </>
           ) : (
             <div className="cart-msg">
-              <p>Whats stopping you, designer?</p>
+              <p>What&apos;s stopping you, designer?</p>
             </div>
           )}
 
           <div className="cart-extra-info">
-            <div className="home">
-              <span className="text">
-                <PlaceOutlinedIcon className="icon" /> Home{" "}
-              </span>
-            </div>
+            {cart.length === 0 ? (
+              <>
+                <div className="home">
+                  <span className="text">
+                    <PlaceOutlinedIcon className="icon" /> Home
+                  </span>
+                </div>
 
-            <div className="date">
-              <span className="text">
-                <CalendarTodayOutlinedIcon /> Select date{" "}
-              </span>
-            </div>
+                <div className="date">
+                  <span className="text">
+                    <CalendarTodayOutlinedIcon /> Select date
+                  </span>
+                </div>
+              </>
+            ) : (
+              <>
+                <div className="home">
+                  <span className="text-enabled">
+                    <PlaceOutlinedIcon className="icon" /> Home
+                  </span>
+                </div>
+
+                <div className="date">
+                  <span className="text-enabled">
+                    <CalendarTodayOutlinedIcon /> Select date
+                  </span>
+                </div>
+              </>
+            )}
           </div>
 
           <div className="order-btn-container">

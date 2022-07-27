@@ -9,6 +9,7 @@
 .logo{
     width: 4rem;
     height: 3.5rem;
+    cursor: pointer;
 }
 
 .main-components{
@@ -17,14 +18,14 @@
     gap: 2rem;
 }
 
+.main-components a.active{
+    text-decoration: underline;
+}
+
 .individual-component{
     text-decoration: none;
     color: black;
     font-size: 1.2rem;
-}
-
-.individual-component:active{
-    text-decoration: underline;
 }
 
 .user-container{

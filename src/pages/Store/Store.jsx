@@ -4,6 +4,8 @@ import { Filter, ProductCard, Cart } from "./../../Component";
 import SearchIcon from "@mui/icons-material/Search";
 import { useAllContext } from "../../context/context";
 import LocalMallOutlinedIcon from "@mui/icons-material/LocalMallOutlined";
+import PlaceOutlinedIcon from "@mui/icons-material/PlaceOutlined";
+import CalendarTodayOutlinedIcon from "@mui/icons-material/CalendarTodayOutlined";
 
 export const Store = () => {
   const {
@@ -47,8 +49,48 @@ export const Store = () => {
             </>
           ) : (
             <div className="cart-msg">
-              <p>Whats stopping you, designer?</p>
+              <p>What&apos;s stopping you, designer?</p>
             </div>
+          )}
+        </div>
+
+        <div className="cart-extra-information">
+          {cart.length === 0 ? (
+            <>
+              <div className="home">
+                <span className="text">
+                  <PlaceOutlinedIcon className="icon" /> Home
+                </span>
+              </div>
+
+              <div className="date">
+                <span className="text">
+                  <CalendarTodayOutlinedIcon /> Select date
+                </span>
+              </div>
+            </>
+          ) : (
+            <>
+              <div className="home">
+                <span className="text-enabled">
+                  <PlaceOutlinedIcon className="icon" /> Home
+                </span>
+              </div>
+
+              <div className="date">
+                <span className="text-enabled">
+                  <CalendarTodayOutlinedIcon /> Select date
+                </span>
+              </div>
+            </>
+          )}
+        </div>
+
+        <div className="order-btn-container">
+          {cart.length === 0 ? (
+            <button className="order-btn disabled-btn">order now</button>
+          ) : (
+            <button className="order-btn">order now</button>
           )}
         </div>
       </div>

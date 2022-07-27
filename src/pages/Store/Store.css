@@ -48,11 +48,18 @@
   box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
 }
 
-.cart-products-container{
-  margin: .5rem;
+.cart-products-container {
+  margin: 0.5rem;
 }
 
-.cart-msg{
+.cart-msg {
   text-align: center;
   margin-top: 10rem;
+}
+
+.cart-extra-information {
+  display: flex;
+  gap: 1.5rem;
+  padding: 1rem;
+  margin-top: 11rem;
 }

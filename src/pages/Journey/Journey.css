@@ -66,12 +66,12 @@
   position: absolute;
   border: 1px solid #999;
   width: 0;
-  height: 6.25rem;
+  height: 5.7rem;
   display: block;
   content: "";
   left: 50%;
   z-index: 1;
-  top: -6.4rem;
+  top: -5.9rem;
   margin-left: -1px;
 }
 .circle:first-child:before {
@@ -83,15 +83,15 @@
 }
 
 .c-2 {
-  margin-top: 6.2rem;
+  margin-top: 5.6rem;
 }
 
 .c-3 {
-  margin-top: 6.3rem;
+  margin-top: 5.7rem;
 }
 
 .c-4 {
-  margin-top: 6.3rem;
+  margin-top: 5.7rem;
 }
 
 .content-heading {
@@ -100,17 +100,17 @@
 }
 
 .bg-logo-container {
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    background-position: center center;
-    background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center center;
+  background-size: cover;
 }
 
 .bg-logo {
-    width: 40%;
-    height: 40%;
-    position: fixed;
-    left: 30%;
-    top: 53%;
-    opacity: 0.7;
+  width: 40%;
+  height: 40%;
+  position: fixed;
+  left: 30%;
+  top: 53%;
+  opacity: 0.7;
 }

@@ -1,0 +1,231 @@
+.shoe-size {
+  font-weight: 400;
+  font-size: 1rem;
+  color: rgb(9, 9, 9);
+  text-decoration: none;
+}
+
+.designSpace {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 1.5rem;
+}
+
+.navigate_links li {
+  display: inline-block;
+  padding: 10px 20px;
+}
+
+/* button {
+  margin-left: 70px;
+  padding: 9px 12px;
+  color: black;
+  border: none;
+  cursor: pointer;
+} */
+
+.shoeRate {
+  display: flex;
+  flex-direction: row;
+}
+
+.rateProduct {
+  margin-top: 12px;
+}
+
+.rate {
+  float: left;
+  padding: 0.8rem;
+  height: 0.5rem;
+}
+
+.rate:not(:checked) > input {
+  position: absolute;
+  top: -9999px;
+}
+
+.rate:not(:checked) > label {
+  float: right;
+  width: 1em;
+  overflow: hidden;
+  white-space: nowrap;
+  cursor: pointer;
+  font-size: 30px;
+  color: #ccc;
+}
+
+.rate:not(:checked) > label:before {
+  content: "★ ";
+}
+
+.rate > input:checked ~ label {
+  color: #ffc700;
+}
+
+.rate:not(:checked) > label:hover,
+.rate:not(:checked) > label:hover ~ label {
+  color: #deb217;
+}
+
+.rate > input:checked + label:hover,
+.rate > input:checked + label:hover ~ label,
+.rate > input:checked ~ label:hover,
+.rate > input:checked ~ label:hover ~ label,
+.rate > label:hover ~ input:checked ~ label {
+  color: #c59b08;
+}
+
+.icon {
+  height: 20px;
+}
+
+.design {
+  display: flex;
+  flex-direction: row;
+}
+
+.designContainer {
+  margin: 10px;
+  padding: 10px;
+}
+
+.mainImage {
+  margin-top: 30px;
+}
+
+.optionShoes {
+  margin-left: 10px;
+  margin-top: 30px;
+}
+
+.shoe-img {
+  height: 15rem;
+  width: 20rem;
+}
+
+.shoes1 > img {
+  height: 7rem;
+  width: 10rem;
+}
+
+.buttonLink {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  padding: 2rem;
+}
+
+.share-btn {
+  border: 1px solid black;
+  background: transparent;
+  margin-right: 2rem;
+  padding: .5rem;
+}
+
+.add-to-cart-btn {
+  background: black;
+  color: white;
+  padding: .5rem;
+  width: 6.5rem;
+}
+
+.designContainer {
+  display: flex;
+  flex-direction: column;
+}
+
+.preferenceShoes {
+  margin-left: 30px;
+  margin-top: 30px;
+}
+
+.price {
+  margin-top: 20px;
+}
+
+.review {
+  margin-top: 20px;
+}
+
+.checked {
+  color: orange;
+}
+
+.size {
+  display: flex;
+  flex-direction: row;
+  margin-top: 20px;
+}
+
+.size > ul {
+  padding: 0;
+  margin: 0;
+  clear: both;
+  list-style: none;
+}
+
+.size > li {
+  list-style-type: none;
+  list-style-position: outside;
+  padding: 10px;
+  float: left;
+  display: block;
+}
+
+.size > ul {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  padding: 8px;
+  gap: 0.5rem;
+}
+
+input[type="checkbox"]:not(:checked),
+input[type="checkbox"]:checked {
+  position: absolute;
+  left: -9999%;
+}
+
+input[type="checkbox"] + label {
+  display: inline-block;
+  padding: 10px;
+  cursor: pointer;
+  border: 1px solid black;
+  color: black;
+  background-color: white;
+  margin-bottom: 10px;
+}
+
+input[type="checkbox"]:checked + label {
+  border: 1px solid white;
+  color: white;
+  background-color: black;
+}
+
+.cartText {
+  margin-top: 200px;
+  text-align: center;
+}
+
+/* .cartButton > button {
+  margin-top: 260px;
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 35%;
+  height: 40px;
+  background-color: black;
+  color: white;
+  border: none;
+  cursor: pointer;
+} */
+
+@media screen and (max-width: 1000px) {
+  .designSpace {
+    flex-direction: column;
+  }
+}

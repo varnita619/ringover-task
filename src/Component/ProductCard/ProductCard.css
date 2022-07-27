@@ -1,6 +1,7 @@
 .card {
   width: 13rem;
   position: relative;
+  cursor: pointer;
 }
 
 .card .product-image {

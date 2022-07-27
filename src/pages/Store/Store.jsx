@@ -46,7 +46,9 @@ export const Store = () => {
               })}
             </>
           ) : (
-            "Whats stopping you, designer?"
+            <div className="cart-msg">
+              <p>Whats stopping you, designer?</p>
+            </div>
           )}
         </div>
       </div>
